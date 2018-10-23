@@ -22,7 +22,7 @@
 </tr>
 
 <tr> 
-<td>docker container run -d -p 5000:80 kujira1/mynginx:org</td> 
+<td height=50pt>docker container run -d -p 5000:80 kujira1/mynginx:org</td> 
 </tr>
 
 <tr> 
@@ -34,7 +34,7 @@
 </tr>
 
 <tr> 
-<td>docker container ls -a</td> 
+<td height=50pt>docker container ls -a</td> 
 </tr>
 
 <tr> 
@@ -46,7 +46,7 @@
 </tr>
 
 <tr> 
-<td>winpty docker container exec -it <コンテナ ID> bash</td> 
+<td height=50pt>winpty docker container exec -it <コンテナ ID> bash</td> 
 </tr>
 
 <tr> 
@@ -58,7 +58,7 @@
 </tr>
 
 <tr> 
-<td>cat /usr/share/nginx/html/index.html</td> 
+<td height=50pt>cat /usr/share/nginx/html/index.html</td> 
 </tr>
 
 <tr> 
@@ -70,7 +70,7 @@
 </tr>
 
 <tr> 
-<td>sed -ie 's/nginx/<name>/' /usr/share/nginx/html/index.html</td> 
+<td height=50pt>sed -ie 's/nginx/<name>/' /usr/share/nginx/html/index.html</td> 
 </tr>
 
 <tr> 
@@ -82,7 +82,7 @@
 </tr>
 
 <tr> 
-<td>http://localhost:5000/</td> 
+<td height=50pt>http://localhost:5000/</td> 
 </tr>
 
 <tr> 
@@ -94,7 +94,7 @@
 </tr>
 
 <tr> 
-<td>exit</td> 
+<td height=50pt>exit</td> 
 </tr>
 
 <tr> 
@@ -106,7 +106,7 @@
 </tr>
 
 <tr> 
-<td>docker container ls -a</td> 
+<td height=50pt>docker container ls -a</td> 
 </tr>
 
 <tr> 
@@ -118,7 +118,7 @@
 </tr>
 
 <tr> 
-<td>docker stop <コンテナ ID></td> 
+<td height=50pt>docker stop <コンテナ ID></td> 
 </tr>
 
 <tr> 
@@ -130,7 +130,7 @@
 </tr>
 
 <tr> 
-<td>docker commit <コンテナ ID>  mynginx:<01_name></td> 
+<td height=50pt>docker commit <コンテナ ID>  mynginx:<01_name></td> 
 </tr>
 
 <tr> 
@@ -142,7 +142,7 @@
 </tr>
 
 <tr> 
-<td>docker image ls</td> 
+<td height=50pt>docker image ls</td> 
 </tr>
 
 <tr> 
@@ -154,7 +154,7 @@
 </tr>
 
 <tr> 
-<td>docker image tag mynginx:<tag> kujira1/mynginx:<01_name></td> 
+<td height=50pt>docker image tag mynginx:<tag> kujira1/mynginx:<01_name></td> 
 </tr>
 
 <tr> 
@@ -166,7 +166,7 @@
 </tr>
 
 <tr> 
-<td>winpty docker login</td> 
+<td height=50pt>winpty docker login</td> 
 </tr>
 
 <tr> 
@@ -178,7 +178,7 @@
 </tr>
 
 <tr> 
-<td>docker image push kujira1/mynginx:<01_name></td> 
+<td height=50pt>docker image push kujira1/mynginx:<01_name></td> 
 </tr>
 
 <tr> 
@@ -190,7 +190,7 @@
 </tr>
 
 <tr> 
-<td>az.cmd login</td> 
+<td height=50pt>az.cmd login</td> 
 </tr>
 
 <tr> 
@@ -202,7 +202,7 @@
 </tr>
 
 <tr> 
-<td>docker-machine create -d azure \<br>
+<td  height=200pt>docker-machine create -d azure \<br>
     --azure-subscription-id $sub \<br>
     --azure-ssh-user azureuser \<br>
     --azure-open-port 80 \<br>
@@ -219,7 +219,7 @@
 </tr>
 
 <tr> 
-<td>eval "$(docker-machine env myvm)"</td> 
+<td height=50pt>eval "$(docker-machine env myvm)"</td> 
 </tr>
 
 <tr> 
@@ -231,7 +231,7 @@
 </tr>
 
 <tr> 
-<td>docker container run -d -p 80:80 kujira1/mynginx:<tag></td> 
+<td height=50pt>docker container run -d -p 80:80 kujira1/mynginx:<tag></td> 
 </tr>
 
 <tr> 
@@ -243,7 +243,7 @@
 </tr>
 
 <tr> 
-<td>docker container ls -a</td> 
+<td height=50pt>docker container ls -a</td> 
 </tr>
 
 <tr> 
@@ -255,7 +255,7 @@
 </tr>
 
 <tr> 
-<td>docker-machine ip myvm</td> 
+<td height=50pt>docker-machine ip myvm</td> 
 </tr>
 
 <tr> 
