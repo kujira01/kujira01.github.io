@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Welcome to nginx!</title>
+<title>Welcome to TechSummit Handon</title>
 <style>
     body {
         width: 35em;
@@ -11,7 +11,178 @@
 </style>
 </head>
 <body>
-<h1>Welcom to nginx!</h1>
+<table border="0">
+
+<tr> 
+<td>2. Dockerコンテナを作成する：</td> 
+</tr>
+
+<tr> 
+<td>docker container run -d -p 5000:80 kujira1/mynginx:org</td> 
+</tr>
+
+<tr> 
+<td>3. 上記で作成したコンテナを一覧表示して、IDを確認する：</td> 
+</tr>
+
+<tr> 
+<td>docker container ls -a</td> 
+</tr>
+
+<tr> 
+<td>4．実行中のコンテナ内でbash シェルを実行: </td> 
+</tr>
+
+<tr> 
+<td>winpty docker container exec -it <コンテナ ID> bash</td> 
+</tr>
+
+<tr> 
+<td>5. コンテナ内のhtmlを確認：</td> 
+</tr>
+
+<tr> 
+<td>cat /usr/share/nginx/html/index.html</td> 
+</tr>
+
+<tr> 
+<td>6．コンテナ内のhtmlを修正する：</td> 
+</tr>
+
+<tr> 
+<td>sed -ie 's/nginx/<name>/' /usr/share/nginx/html/index.html</td> 
+</tr>
+
+<tr> 
+<td>7．コンテナのhtmlをブラウザから確認：</td> 
+</tr>
+
+<tr> 
+<td>http://localhost:5000/</td> 
+</tr>
+
+<tr> 
+<td>8．Dockerコンテナから抜ける：</td> 
+</tr>
+
+<tr> 
+<td>exit</td> 
+</tr>
+
+<tr> 
+<td>9．htmlを修正したコンテナのIDを確認：</td> 
+</tr>
+
+<tr> 
+<td>docker container ls -a</td> 
+</tr>
+
+<tr> 
+<td>10．IDを確認したコンテナを停止する：</td> 
+</tr>
+
+<tr> 
+<td>docker stop <コンテナ ID></td> 
+</tr>
+
+<tr> 
+<td>11．コンテナからイメージをビルドする：</td> 
+</tr>
+
+<tr> 
+<td>docker commit <コンテナ ID>  mynginx:<01_name></td> 
+</tr>
+
+<tr> 
+<td>12．作成したDockerイメージを確認：</td> 
+</tr>
+
+<tr> 
+<td>docker image ls</td> 
+</tr>
+
+<tr> 
+<td>13．イメージを正しいネームスぺースにタグ付けし直す：</td> 
+</tr>
+
+<tr> 
+<td>docker image tag mynginx:<tag> kujira1/mynginx:<01_name></td> 
+</tr>
+
+<tr> 
+<td>13．コマンドラインからDocker Hubにログイン：</td> 
+</tr>
+
+<tr> 
+<td>winpty docker login</td> 
+</tr>
+
+<tr> 
+<td>14．イメージをDocker Hubにプッシュ：</td> 
+</tr>
+
+<tr> 
+<td>docker image push kujira1/mynginx:<01_name></td> 
+</tr>
+
+<tr> 
+<td>15．Azureにlogin：</td> 
+</tr>
+
+<tr> 
+<td>az.cmd login</td> 
+</tr>
+
+<tr> 
+<td>16．docker-machineを使用してAzureに VM を作成：</td> 
+</tr>
+
+<tr> 
+<td>docker-machine create -d azure \
+    --azure-subscription-id $sub \
+    --azure-ssh-user azureuser \
+    --azure-open-port 80 \
+    --azure-size "Standard_DS2_v2" \
+    myvm</td> 
+</tr>
+
+<tr> 
+<td>17．Azure上に入れたDockerに変更する：</td> 
+</tr>
+
+<tr> 
+<td>eval "$(docker-machine env myvm)"</td> 
+</tr>
+
+<tr> 
+<td>18．DockerイメージからAzure上でコンテナを作成：</td> 
+</tr>
+
+<tr> 
+<td>docker container run -d -p 80:80 kujira1/mynginx:<tag></td> 
+</tr>
+
+<tr> 
+<td>19．Dockerコンテナを確認：</td> 
+</tr>
+
+<tr> 
+<td>docker container ls -a</td> 
+</tr>
+
+<tr> 
+<td>20．Azureのパブリック IP アドレスを取得：</td> 
+</tr>
+
+<tr> 
+<td>docker-machine ip myvm</td> 
+</tr>
+
+<tr> 
+<td>21．取得したIPアドレスをブラウザで確認。</td> 
+</tr>
+
+</table>
 </body>
 </html>
 
