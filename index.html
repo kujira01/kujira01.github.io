@@ -138,11 +138,11 @@
 </tr>
 
 <tr> 
-<td class="gray">11．コンテナからイメージをビルドする：</td> 
+<td class="gray">11. Docker HubでDocker IDを作成：</td> 
 </tr>
 
 <tr> 
-<td height=50pt>docker commit <font class="aka"><コンテナ ID></font>  kujira1/mynginx:<font class="aka"><01_name></font></td> 
+<td height=50pt>https://hub.docker.com/</td> 
 </tr>
 
 <tr> 
@@ -150,7 +150,19 @@
 </tr>
 
 <tr> 
-<td class="gray">12．コマンドラインからDocker Hubにログイン：</td> 
+<td class="gray">12．コンテナからイメージをビルドする：</td> 
+</tr>
+
+<tr> 
+<td height=50pt>docker commit <font class="aka"><コンテナ ID></font>  <font class="aka"><DockerID></font>/mynginx:<font class="aka"><01_name></font></td> 
+</tr>
+
+<tr> 
+<td height=1pt bgcolor="#3f739b"></td> 
+</tr>
+
+<tr> 
+<td class="gray">13．コマンドラインからDocker Hubにログイン：</td> 
 </tr>
 
 <tr> 
@@ -158,7 +170,15 @@
 </tr>
 
 <tr> 
-<td height=80pt class="ao">Docker Id: kujira1<br> Password: kujirapw!</td> 
+<td height=1pt bgcolor="#3f739b"></td> 
+</tr>
+
+<tr> 
+<td class="gray">14．イメージをDocker Hubにプッシュ：</td> 
+</tr>
+
+<tr> 
+<td height=50pt>docker image push <font class="aka"><DockerID></font>/mynginx:<font class="aka"><01_name></font></td> 
 </tr>
 
 <tr> 
@@ -166,19 +186,7 @@
 </tr>
 
 <tr> 
-<td class="gray">13．イメージをDocker Hubにプッシュ：</td> 
-</tr>
-
-<tr> 
-<td height=50pt>docker image push kujira1/mynginx:<font class="aka"><01_name></font></td> 
-</tr>
-
-<tr> 
-<td height=1pt bgcolor="#3f739b"></td> 
-</tr>
-
-<tr> 
-<td class="gray">14．Azureにlogin：</td> 
+<td class="gray">15．Azureにlogin：</td> 
 </tr>
 
 <tr> 
@@ -190,11 +198,11 @@
 </tr>
 
 <tr> 
-<td class="gray">15. Azure サブスクリプション ID を取得：</td> 
+<td class="gray">16. Azure サブスクリプション ID を取得：</td> 
 </tr>
 
 <tr> 
-<td height=50pt>sub=$(az account show --query "id" -o tsv)</td> 
+<td height=50pt>sub=$(az.cmd account show --query "id" -o tsv)</td> 
 </tr>
 
 <tr> 
@@ -202,11 +210,12 @@
 </tr>
 
 <tr> 
-<td class="gray">16．docker-machineを使用してAzureに VM を作成：</td> 
+<td class="gray">17．docker-machineを使用してAzureに VM を作成：</td> 
 </tr>
 
 <tr> 
 <td  height=200pt>docker-machine create -d azure \<br>
+    --azure-location japaneast \<br>
     --azure-subscription-id $sub \<br>
     --azure-ssh-user azureuser \<br>
     --azure-open-port 80 \<br>
@@ -219,7 +228,7 @@
 </tr>
 
 <tr> 
-<td class="gray">17．Docker コマンドの対象をAzure上に入れたDockerに変更する：</td> 
+<td class="gray">18．Docker コマンドの対象をAzure上に入れたDockerに変更する：</td> 
 </tr>
 
 <tr> 
@@ -231,11 +240,11 @@
 </tr>
 
 <tr> 
-<td class="gray">18．DockerイメージからAzure上でコンテナを作成：</td> 
+<td class="gray">19．DockerイメージからAzure上でコンテナを作成：</td> 
 </tr>
 
 <tr> 
-<td height=50pt>docker container run -d -p 80:80 kujira1/mynginx:<font class="aka"><01_name></font></td> 
+<td height=50pt>docker container run -d -p 80:80 <font class="aka"><DockerID></font>/mynginx:<font class="aka"><01_name></font></td> 
 </tr>
 
 <tr> 
@@ -243,7 +252,7 @@
 </tr>
 
 <tr> 
-<td class="gray">19．Dockerコンテナを確認：</td> 
+<td class="gray">20．Dockerコンテナを確認：</td> 
 </tr>
 
 <tr> 
@@ -255,7 +264,7 @@
 </tr>
 
 <tr> 
-<td class="gray">20．Azureのパブリック IP アドレスを取得：</td> 
+<td class="gray">21．Azureのパブリック IP アドレスを取得：</td> 
 </tr>
 
 <tr> 
@@ -267,7 +276,7 @@
 </tr>
 
 <tr> 
-<td height=60pt class="gray">21．取得したIPアドレスをブラウザで確認。</td> 
+<td height=60pt class="gray">22．取得したIPアドレスをブラウザで確認。</td> 
 </tr>
 
 <tr> 
@@ -275,7 +284,7 @@
 </tr>
 
 <tr> 
-<td class="gray">22．Azure上の仮想マシンを停止：</td> 
+<td class="gray">23．Azure上の仮想マシンを停止：</td> 
 </tr>
 
 <tr> 
@@ -287,7 +296,7 @@
 </tr>
 
 <tr> 
-<td class="gray">23．Azure上の仮想マシンを削除：</td> 
+<td class="gray">24．Azure上の仮想マシンを削除：</td> 
 </tr>
 
 <tr> 
